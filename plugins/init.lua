@@ -2,6 +2,11 @@ local overrides = require "custom.plugins.overrides"
 
 return {
   ["ggandor/lightspeed.nvim"] = {},
+  ["sakhnik/nvim-gdb"] = {
+    config = function()
+      io.popen("./install.sh")
+    end
+  },
   ["lukas-reineke/indent-blankline.nvim"] = {
     disable = true,
   },
@@ -49,12 +54,12 @@ return {
   },
 
   -- code formatting, linting etc
-  ["jose-elias-alvarez/null-ls.nvim"] = {
-    after = "nvim-lspconfig",
-    config = function()
-      require "custom.plugins.null-ls"
-    end,
-  },
+  -- ["jose-elias-alvarez/null-ls.nvim"] = {
+  --   after = "nvim-lspconfig",
+  --   config = function()
+  --     require "custom.plugins.null-ls"
+  --   end,
+  -- },
 
   -- remove plugin
   -- ["hrsh7th/cmp-path"] = false,

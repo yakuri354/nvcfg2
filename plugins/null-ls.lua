@@ -23,8 +23,8 @@ local sources = {
   b.formatting.clang_format,
   b.formatting.rustfmt,
 }
-
-null_ls.setup {
-  debug = true,
-  sources = sources,
-}
+--
+-- null_ls.setup {
+--   debug = true,
+--   sources = sources,
+-- }
